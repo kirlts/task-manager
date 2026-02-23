@@ -59,3 +59,17 @@ Para evitar la recurrencia de errores de configuración por falta de variables d
 ### Decisión de Estandarización
 
 Se creó `env.example` en la raíz del proyecto. Este archivo actúa como una "guía de supervivencia" técnica, obligando a explicitar el uso de la `GEMINI_API_KEY` y proporcionando enlaces a Google AI Studio. Esta acción refuerza la *Robustez* del sistema al facilitar el onboarding y reducir la ambigüedad técnica.
+
+---
+
+## [2026-02-23] - Resolución de Error de Inicialización y Recuperación de Ceguera del Terminal
+
+### Incidente: Falla en Inicialización de Contenedores
+
+Tras un reinicio de contenedores, un intento de uso regular experimentó un 500 Internal Server error ("relation tasks_task does not exist") emitido por la API de Django a falta de tablas en PostgreSQL, causando frustración en el usuario al no haber visibilidad ("ceguera temporal del terminal").
+
+### Decisión Operativa y Custodia del Artefacto
+
+* Se aplicó la **Regla del 1-Strike** para Bypass Permanente, emitiendo trazas de log del orquestador a un archivo leíble.
+* Este diagnóstico relevó que la instrucción de arranque `django runserver` asumía ingenuamente que la DB estaba migrada.
+* **Tensión Resuelta**: Se modificó proactivamente el `docker-compose.yml` para ejecutar migraciones pre-aplicación (`python manage.py migrate && python manage.py runserver`), garantizando el *Polo Kratos (Robutez)* y materializando una convergencia sólida en cualquier inicio, resguardando la estabilidad inicial futura.

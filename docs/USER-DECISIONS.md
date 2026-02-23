@@ -71,3 +71,16 @@ Este archivo registra todas las decisiones que el usuario haya tomado o las corr
 **Impacto en la Arquitectura/Proyecto:**
 
 - Se añade un archivo de documentación técnica (`env.example`) en la raíz del proyecto.
+
+---
+
+**Fecha:** 2026-02-23
+**Contexto/Conversación:** [Actual] Actualización de .gitignore
+**Decisión u Orden del Usuario:**
+
+- *¿Qué se decidió?*: Ampliar el archivo `.gitignore` con patrones estándar para Django y React, y asegurar que `env.example` sea visible para Git.
+- *¿Por qué?*: Para mantener el repositorio limpio de archivos temporales, logs y directorios de dependencias, reduciendo el ruido en el control de versiones, mientras se permite compartir la plantilla de configuración.
+
+**Impacto en la Arquitectura/Proyecto:**
+
+- El archivo raíz `.gitignore` ha sido robustecido con secciones para Entornos, IDEs, Backend, Frontend y Logs locales.

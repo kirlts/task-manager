@@ -51,3 +51,5 @@ Ajustes derivados del uso y feedback sobre la interfaz e integración.
 - [x] **Subtarea 8:** Corregir superposición visual de botones de acción en subtareas ajustando padding lateral. `[Chat ID: 34e0a664-49b9-4c73-bd37-485baa755762]`
 - [x] **Subtarea 9:** Generar README.md general basado en la misión, la arquitectura y los documentos del proyecto. `[Chat ID: 86c98969-c077-410a-b78a-afd9297f583b]`
 - [x] **Subtarea 10:** Crear archivo `env.example` con instrucciones sobre la Gemini API Key. `[Chat ID: actual]`
+- [x] **Subtarea 11:** Resolucion automatizada (vía script) de migraciones de modelo en entorno virtual Docker para solventar caídas en primer build. `[Chat ID: activo]`
+- [x] **Subtarea 12:** Actualizar `.gitignore` y asegurar que `env.example` sea commiteable. `[Chat ID: 2026-02-23T13:26:20-03:00]`
