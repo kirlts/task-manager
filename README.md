@@ -51,9 +51,6 @@ Una plataforma de gestión de tareas de alto rendimiento que fusiona la organiza
 
    ```env
    GEMINI_API_KEY=tu_api_key_aquí
-   POSTGRES_DB=taskmanager
-   POSTGRES_USER=postgres
-   POSTGRES_PASSWORD=postgres
    ```
 
 3. **Lanzar Servicios**:
